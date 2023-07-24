@@ -1,0 +1,11 @@
+{
+  "name": "netease",
+  "version": "1.0.0",
+  "description": "哥们儿仿的",
+  "main": "jquery-3.7.0.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZhouTao",
+  "license": "ISC"
+}

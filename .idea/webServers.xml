@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d3a945ce-7e78-4240-b8e4-d60bd29ff211" name="live-server" url="http://localhost">
+        <fileTransfer mountedRoot="C:\Users\lzz15\Desktop\netease" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
