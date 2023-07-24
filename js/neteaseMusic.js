@@ -8,6 +8,7 @@ NeteaseMusic.prototype = {
     },
     bindEvent() {
         let nowIndex = [0, 1, 2, 3]
+        let timeId = null
         const directionNames = ['toBack', 'toLeft', 'toFront', 'toRight']
         function moveForward(reverse) {
             for (let i = 0; i < 4; i++) {
@@ -25,6 +26,11 @@ NeteaseMusic.prototype = {
             }
         }
 
+        function autoPlay() {
+            timeId = setInterval(() => $('.carousel .next').click(), 2000)
+        }
+        autoPlay()
+
         $('.carousel .prev').click(() => moveForward(true))
         $('.carousel .next').click(() => moveForward())
         $('.dotGuide .dot').hover(e => {
@@ -41,8 +47,10 @@ NeteaseMusic.prototype = {
             
         })
         $('.carousel').hover(e => {
+            clearInterval(timeId)
             $('.carousel .prev, .carousel .next').css('display', 'flex')
         }, e => {
+            autoPlay()
             $('.carousel .prev, .carousel .next').fadeOut(260)
         })
     }
